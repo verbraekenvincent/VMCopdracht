@@ -15,14 +15,14 @@ namespace MVCopdracht.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "This is an ASP.NET MVC application for Programmeren 5.";
 
             return View();
         }
 
         public ActionResult Contact()
         {
-            ViewBag.Message = "Your contact page.";
+            ViewBag.Message = "Please no contact.";
 
             return View();
         }

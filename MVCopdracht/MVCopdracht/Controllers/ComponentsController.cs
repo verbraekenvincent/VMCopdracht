@@ -42,6 +42,7 @@ namespace MVCopdracht.Controllers
         }
 
         // GET: Components/Create
+        [Authorize]
         public ActionResult Create()
         {
             return View();
@@ -51,6 +52,7 @@ namespace MVCopdracht.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public ActionResult Create([Bind(Include = "ID,Category,Name,Datasheeturl,Amount,Price")] Component component)
         {
@@ -65,6 +67,7 @@ namespace MVCopdracht.Controllers
         }
 
         // GET: Components/Edit/5
+        [Authorize]
         public ActionResult Edit(int? id)
         {
             if (id == null)
@@ -83,6 +86,7 @@ namespace MVCopdracht.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
+        [Authorize]
         [ValidateAntiForgeryToken]
         public ActionResult Edit([Bind(Include = "ID,Category,Name,Datasheeturl,Amount,Price")] Component component)
         {
@@ -96,6 +100,7 @@ namespace MVCopdracht.Controllers
         }
 
         // GET: Components/Delete/5
+        [Authorize]
         public ActionResult Delete(int? id)
         {
             if (id == null)
@@ -111,6 +116,7 @@ namespace MVCopdracht.Controllers
         }
 
         // POST: Components/Delete/5
+        [Authorize]
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
